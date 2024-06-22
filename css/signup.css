@@ -1,0 +1,10 @@
+body{
+    background-image: url(../assest/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+h3{
+    font-family: "DM Serif Text", serif;
+}

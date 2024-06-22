@@ -1,6 +1,7 @@
 var email = document.getElementById("email")
 var pass = document.getElementById("pass")
 var signinBtn = document.getElementById("signinBtn")
+var nameinput = document.getElementById("nameinput")
 console.log(email, pass, signinBtn)
 var users;
 if (localStorage.getItem('Users') == null) {
@@ -12,7 +13,7 @@ else {
 
 
 
-signinBtn.addEventListener('click',function(){
+signinBtn.addEventListener('click', function () {
     login()
 })
 
@@ -28,7 +29,7 @@ function userexist() {
 
     for (var i = 0; i < users.length; i++) {
         if (email.value == users[i].email && pass.value == users[i].pass) {
-            localStorage.setItem("User",users[i].name)
+            localStorage.setItem("User", users[i].nameinput)
             email.nextElementSibling.classList.replace('d-block', 'd-none')
             pass.nextElementSibling.classList.replace('d-block', 'd-none')
             return true

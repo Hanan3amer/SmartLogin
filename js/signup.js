@@ -28,6 +28,10 @@ function adduser() {
         users.push(user)
         localStorage.setItem('Users', JSON.stringify(users))
         console.log(users)
+        clear()
+    }
+    else{
+        emailfound()
     }
 }
 
@@ -63,4 +67,13 @@ function emailexist() {
         }
     }
     return false;
+}
+
+function emailfound(){
+    if(emailexist()){
+        document.getElementById('alert').classList.replace('d-none', 'd-block')
+    }
+    else{
+        document.getElementById('alert').classList.replace('d-block', 'd-none')   
+    }
 }
